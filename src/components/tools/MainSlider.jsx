@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
+import $ from 'jquery'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -28,13 +28,29 @@ export default function MainSlider() {
   }, [])
 
   async function GetSlider() {
-     axios.get(`${BaseApi}banners/`)
-      .then(res => {
-        setSlider(res.data)
-        console.log(res);
-      })
-      .catch(err => { })
+    // axios.get(`${BaseApi}banners/`)
+    //   .then(res => {
+    //     setSlider(res.data)
+    //     console.log(res);
+    //   })
+    //   .catch(err => { })
+
+    await $.ajax({
+      url: `${BaseApi}banners/`,
+      type: 'GET',
+      success: function (res) {
+        console.log(res.data);
+        setSlider(res)
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
   }
+
+
+
+
 
   return (
     <>

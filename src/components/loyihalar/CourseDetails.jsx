@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import BaseApi from '../../BaseApi'
 import moment from 'moment'
-import OurSocial from '../OurSocial'
 
 export default function CourseDetails() {
   const { id } = useParams()
@@ -53,7 +52,6 @@ export default function CourseDetails() {
                   {findItem(id).name ? (<div dangerouslySetInnerHTML={{ __html: `${findItem(id).full_description}` }} ></div>)
                     : ""}
 
-                    <OurSocial/>
                   <div className="events-details-share d-flex justify-content-end mt-30">
                     <div className="events-details-title">
                       <span>Bizni sahifa</span>

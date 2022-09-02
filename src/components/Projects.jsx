@@ -3,44 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import BaseApi from '../BaseApi'
+import { Project } from './Styled.component'
 
 export default function Projects() {
 
   const [project, setProject] = useState(null)
-  const Project = styled.div`
-    background-image:url('img/bg/loyihalar.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    h2{
-      text-align: center;
-      color: #0177ea;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding-top: 15px;
-    }
-    .loyiha{
-      .row{
-        border-radius: 30px;
-        padding: 15px;
-        margin-bottom: 24px;
-        border: 3px solid #0177ea;
-        font-size: 35px;
-        font-weight: 700;
-      }
-    }
-    @media screen and (max-width:480px) {
-      .loyiha{
-        .row{
-          border-radius: 30px;
-          border: 3px solid #0177ea;
-          font-size: 20px;
-          font-weight: 700;
-        }
-      }
-    }
-  `
+ 
 
   useEffect(() => {
     getProject()

@@ -12,67 +12,12 @@ import Loading from './tools/Loading'
 import styled from 'styled-components'
 import { about } from '../Data'
 import Qadriyat from './Qadriyat'
+import { About } from './Styled.component'
 
 export default function Home() {
 
   const [news, setNews] = useState([])
   const [abouts, setAbouts] = useState([])
-
-
-  const About = styled.div`
-    background-image: url('img/bg/sayt.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    h2{
-      text-align: center;
-      color: white;
-      font-weight: 500;
-      letter-spacing: 2px;
-    }
-    .info{
-      background-color: #fff;
-      border-top-left-radius: 60px;
-      border-bottom-right-radius: 60px;
-      background-size: cover;
-      border-left: 20px solid #0287ff;
-      div{
-        width: 100%;
-        margin: 0 auto;
-      }
-      h4{
-        color: black;
-        /* text-align: center; */
-        font-weight: 600;
-      }
-    }
-    @media screen and (max-width: 480px) {
-    background-image: linear-gradient(180deg,#002147,#004595);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    h2{
-      text-align: center;
-      color: white;
-      font-weight: 500;
-      letter-spacing: 2px;
-      font-size: 33px;
-    }
-    .info{
-      background-size: cover;
-      div{
-        width: 85%;
-        margin: 0 auto;
-      }
-      h4{
-        color: black;
-        font-size: 16px;
-        font-weight: 500;
-      }
-    }
-    }
-  `
-
 
   const GetNews = async () => {
     await axios.get(`${BaseApi}news/`)
@@ -90,13 +35,9 @@ export default function Home() {
       })
       .catch(err => { console.log(err); })
   }
-
-
-
   useEffect(() => {
     GetAbout()
     GetNews()
-
   }, [])
 
 

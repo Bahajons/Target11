@@ -47,12 +47,12 @@ export default function Course() {
       <div className="slider-area">
         <div className="pages-title">
           <div className="single-slider slider-height slider-height-breadcrumb d-flex align-items-center"
-            style={{ backgroundImage: "url('./img/bg/others_bg.jpg')" }}>
+            style={{ backgroundImage: "url('./img/bg/kurs.jpg')" }}>
             <div className="container">
               <div className="row">
                 <div className="col-xl-12">
                   <div className="slider-content slider-content-breadcrumb text-center">
-                    <h1 className="white-color f-700">Kurslar</h1>
+                    {/* <h1 className="white-color f-700">Kurslar</h1> */}
                   </div>
                 </div>
               </div>

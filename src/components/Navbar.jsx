@@ -43,26 +43,16 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto pr-5" style={style}>
               <li className="nav-item">
-                <a className="nav-link" >
+                <a className="nav-link">
                   <Link style={style} onClick={() => { hide() }} to={'/news'}>Yangiliklar</Link><span className="sr-only">(current)</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={""}><Link onClick={() => { hide() }} style={style} to={'/inter-school'}>International school</Link><span className="sr-only">(current)</span></a>
+                <a className="nav-link"><Link onClick={() => { hide() }} style={style} to={'/inter-school'}>International school</Link><span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href={""}><Link onClick={() => { hide() }} style={style} to={'/projects'}>Loyihalar</Link><span className="sr-only">(current)</span></a>
               </li>
-              {/* <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href={""} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Loyihalar
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {project.map((item, index) => (
-                    <a className="dropdown-item" key={index} href={""}><Link onClick={() => { hide() }} style={style} to={`/project/${item.slug}`}>{item.name}</Link></a>
-                  ))}
-                </div>
-              </li> */}
               <li className="nav-item">
                 <a className="nav-link" href={""}><Link onClick={() => { hide() }} style={style} to={'/course'}>Kurslar</Link></a>
               </li>
@@ -72,7 +62,7 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
-            <a href="tel:712000737">71 200 07 37</a>
+            <a href={"tel:712000737"}>71 200 07 37</a>
           </div>
         </div>
 
